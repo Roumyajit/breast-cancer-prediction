@@ -1,9 +1,10 @@
 # 🧬 Breast Cancer Classification — Healthcare ML
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat&logo=python)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange?style=flat&logo=scikit-learn)
-![Healthcare](https://img.shields.io/badge/Domain-Healthcare-red?style=flat)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange)
+![Domain](https://img.shields.io/badge/Domain-Healthcare-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Streamlit](https://img.shields.io/badge/Deployed-Streamlit-red)
 
 > A machine learning model to classify breast tumours as **Malignant** or **Benign** with high precision.
 
@@ -20,6 +21,7 @@ Breast cancer is one of the most common cancers worldwide. Early and accurate de
 ## 🎯 Problem Statement
 
 Given 30 clinical features (radius, texture, perimeter, area, smoothness, etc.) measured from a digitised image of a breast mass, predict whether the tumour is:
+
 - 🔴 **Malignant (M)** — Cancerous
 - 🟢 **Benign (B)** — Non-cancerous
 
@@ -38,12 +40,25 @@ Given 30 clinical features (radius, texture, perimeter, area, smoothness, etc.) 
 ## 🔧 Tech Stack
 
 | Category | Tools |
-|---|---|
+|----------|-------|
 | Language | Python 3.8+ |
 | ML Models | Logistic Regression, SVM, Random Forest, Gradient Boosting |
 | Data Analysis | Pandas, NumPy |
 | Visualisation | Matplotlib, Seaborn |
 | Model Evaluation | Scikit-learn metrics |
+| Deployment | Streamlit |
+
+---
+
+## 📁 Project Structure
+
+```
+breast-cancer-prediction/
+│
+├── app.py                  # Streamlit web app
+├── requirements.txt        # Dependencies
+└── README.md               # Project documentation
+```
 
 ---
 
@@ -70,7 +85,7 @@ Given 30 clinical features (radius, texture, perimeter, area, smoothness, etc.) 
 - 5-fold cross-validation for robust evaluation
 
 ### 5. Evaluation Metrics
-- Prioritised **Recall** (Sensitivity) for malignant class
+- Prioritised Recall (Sensitivity) for malignant class
 - Confusion matrix, ROC-AUC curve, Precision-Recall curve
 
 ---
@@ -78,9 +93,9 @@ Given 30 clinical features (radius, texture, perimeter, area, smoothness, etc.) 
 ## 📊 Results
 
 | Model | Accuracy | Precision | Recall (Malignant) | F1-Score | ROC-AUC |
-|---|---|---|---|---|---|
+|-------|----------|-----------|-------------------|----------|---------|
 | Logistic Regression | 97.4% | 96.8% | 97.6% | 97.2% | 0.99 |
-| SVM (RBF) | 98.2% | 97.5% | 98.8% | 98.1% | 0.99 |
+| **SVM (RBF)** | **98.2%** | **97.5%** | **98.8%** | **98.1%** | **0.99** |
 | Random Forest | 97.4% | 96.6% | 97.6% | 97.1% | 0.99 |
 | Gradient Boosting | 97.4% | 97.6% | 96.5% | 97.0% | 0.99 |
 
@@ -88,49 +103,39 @@ Given 30 clinical features (radius, texture, perimeter, area, smoothness, etc.) 
 
 ---
 
-## 📁 Project Structure
+## ▶️ How to Run Locally
 
-```
-breast_cancer_classification/
-│
-├── breast_cancer_model.ipynb    # Main notebook
-├── README.md                    # Project documentation
-└── requirements.txt             # Dependencies
+```bash
+# Clone the repository
+git clone https://github.com/Roumyajit/breast-cancer-prediction.git
+cd breast-cancer-prediction
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
 ```
 
 ---
 
-## ▶️ How to Run
+## 🌐 Live Demo
 
-```bash
-# Clone the repository
-git clone https://github.com/Roumyajit/Data-Science-Projects.git
-cd Data-Science-Projects
-
-# Install dependencies
-pip install pandas numpy matplotlib seaborn scikit-learn
-
-# Open the notebook
-jupyter notebook breast_cancer_model.ipynb
-```
+🚀 **[Try the Live App](https://roumyajit-breast-cancer.streamlit.app)**
 
 ---
 
 ## 🔮 Future Improvements
 
-- [ ] Deploy as a Streamlit web app for clinical use
-- [ ] Experiment with ensemble stacking for further accuracy gains
-- [ ] Add SHAP explainability to explain individual predictions
+- Add SHAP explainability to explain individual predictions
+- Experiment with ensemble stacking for further accuracy gains
+- Add patient report generation feature
 
 ---
 
 ## 👤 Author
 
 **Roumyajit Sarkar**
-- 📧 roumyajits@gmail.com
-- 💼 [LinkedIn](https://www.linkedin.com/in/roumyajit-sarkar/)
-- 🐙 [GitHub](https://github.com/Roumyajit)
-
----
-
-⭐ If you found this project useful, please give it a star!
+📧 roumyajits@gmail.com
+💼 [LinkedIn](https://linkedin.com/in/roumyajit-sarkar)
+🐙 [GitHub](https://github.com/Roumyajit)
